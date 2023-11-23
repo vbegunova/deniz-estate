@@ -376,7 +376,7 @@ button {
 .hero-checkbox:checked::before {
   background-color: #2d4d76;
   position: absolute;
-  top: 1.5px;
+  top: 1px;
   left: 1px;
   width: 6px;
   height: 6px;
