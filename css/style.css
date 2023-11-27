@@ -92,6 +92,10 @@ button {
   cursor: pointer;
 }
 
+form input {
+  font-size: 12px;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -1746,4 +1750,223 @@ button {
   font-size: 28px;
   font-weight: 700;
   line-height: normal;
+}
+
+/* Consult */
+.consult {
+  margin-bottom: 112px;
+}
+
+.consult .container {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 175px;
+  padding-left: 98px;
+  background-image: linear-gradient(0deg, rgba(45, 77, 118, 0) 0%, #1c2445 100%),
+    url(../images/consult-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.consult-title {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.consult-text {
+  width: 400px;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.consult-form-box {
+  position: absolute;
+  top: 51px;
+  right: 70px;
+  padding: 23px 42px 35px 42px;
+  width: 379px;
+  background-color: #fff;
+  border-radius: 20px;
+  filter: drop-shadow(0px 4px 134px rgba(0, 0, 0, 0.25));
+}
+
+.consult-form-title {
+  margin-bottom: 7px;
+  color: #2d4d76;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.consult-soc-media-list {
+  margin-bottom: 7px;
+  justify-content: center;
+  display: flex;
+  gap: 13px;
+}
+
+.consult-soc-media-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-image: linear-gradient(
+    241deg,
+    #8dc8e5 -27.24%,
+    rgba(141, 200, 229, 0) 86.86%
+  );
+}
+
+.consult-soc-media-item:nth-child(1) {
+  padding-right: 3px;
+  padding-bottom: 1px;
+}
+
+.consult-soc-media-item:nth-child(3) {
+  padding-bottom: 2px;
+}
+
+.consult-form-input {
+  color: #929ba0;
+  margin-bottom: 39px;
+  width: 198px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.consult-form-input:last-child {
+  margin-bottom: 33px;
+}
+
+.consult-form-input::placeholder {
+  color: #929ba0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.consult-form-input:focus {
+  outline: none;
+}
+
+/* Footer */
+.footer .line {
+  width: 100%;
+  height: 1px;
+  opacity: 0.2;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    #1c2445;
+}
+
+.footer .line:first-child {
+  margin-bottom: 33px;
+}
+
+.footer .line:last-child {
+  margin-top: 39px;
+  margin-bottom: 37px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  margin-right: 109px;
+  margin-top: 18px;
+}
+
+.footer-contacts-title {
+  margin-bottom: 15px;
+  color: #2d4d76;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 0.8;
+}
+
+.footer-address {
+  width: 229px;
+  color: #25385d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.footer-address:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.phone-numbers-list {
+  margin-bottom: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.phone-number {
+  color: #25385d;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.footer-contacts-email {
+  color: #1c2445;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration-line: underline;
+}
+
+.footer-soc-media-title {
+  margin-bottom: 8px;
+  color: #2d4d76;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.footer-soc-media-list {
+  display: flex;
+  gap: 11px;
+}
+
+.footer-soc-media-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  background-image: linear-gradient(
+    241deg,
+    #8dc8e5 -27.24%,
+    rgba(141, 200, 229, 0) 86.86%
+  );
+}
+
+.footer-soc-media-item:nth-child(1) {
+  padding-right: 3px;
+  padding-bottom: 1px;
+}
+
+.footer-soc-media-item:nth-child(3) {
+  padding-bottom: 2px;
 }
