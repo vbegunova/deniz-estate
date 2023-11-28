@@ -26,6 +26,11 @@
                   <use href="./images/sprite.svg#icon-logo"></use>
                 </svg>
               </a>
+              <a href="#" class="logo-mobile">
+                <svg width="209" height="29">
+                  <use href="./images/sprite.svg#icon-logo"></use>
+                </svg>
+              </a>
               <div class="bars">
                 <div class="top-bar">
                   <ul class="numbers">
@@ -44,21 +49,27 @@
                   </ul>
                   <a class="order-call">Замовити дзвінок</a>
                   <ul class="soc-media-links">
-                    <a class="soc-media-icon" href="#">
-                      <svg width="12" height="12">
-                        <use href="./images/sprite.svg#icon-phone"></use>
-                      </svg>
-                    </a>
-                    <a class="soc-media-icon inst" href="#">
-                      <svg width="14" height="14">
-                        <use href="./images/sprite.svg#icon-inst"></use>
-                      </svg>
-                    </a>
-                    <a class="soc-media-icon youtube" href="#">
-                      <svg width="16" height="11">
-                        <use href="./images/sprite.svg#icon-youtube"></use>
-                      </svg>
-                    </a>
+                    <li class="viber-link">
+                      <a class="soc-media-icon viber" href="#">
+                        <svg width="12" height="12">
+                          <use href="./images/sprite.svg#icon-phone"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="soc-media-icon" href="#">
+                        <svg class="soc-media-inst">
+                          <use href="./images/sprite.svg#icon-inst"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="soc-media-icon" href="#">
+                        <svg class="soc-media-youtube">
+                          <use href="./images/sprite.svg#icon-youtube"></use>
+                        </svg>
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div class="bottom-bar">
@@ -74,13 +85,23 @@
                   </nav>
                   <div class="select-lang">
                     ua
-                    <svg width="5" height="3">
+                    <svg class="icon-select-lang">
                       <use
                         href="./images/sprite.svg#icon-arrow-down-select"
                       ></use>
                     </svg>
                   </div>
                 </div>
+              </div>
+              <div class="line"></div>
+              <div class="mobile-elements">
+                <ul class="mobile-quick-links">
+                  <li><a href="#">Купівля новобудови</a></li>
+                  <li><a href="#">Каталог нерухомості</a></li>
+                </ul>
+                <svg width="30" height="23">
+                  <use href="./images/sprite.svg#icon-burger"></use>
+                </svg>
               </div>
             </div>
           </div>
@@ -103,42 +124,46 @@
                 />
               </h1>
 
-              <ul class="target-list">
-                <li class="target-item">
-                  <svg class="icon-target">
-                    <use href="./images/sprite.svg#icon-tick"></use>
-                  </svg>
-                  <p>Для відпочинку</p>
-                </li>
-                <li class="target-item">
-                  <svg class="icon-target">
-                    <use href="./images/sprite.svg#icon-tick"></use>
-                  </svg>
-                  <p>Для інвестицій</p>
-                </li>
-                <li class="target-item">
-                  <svg class="icon-target">
-                    <use href="./images/sprite.svg#icon-tick"></use>
-                  </svg>
-                  <p>Для життя</p>
-                </li>
-              </ul>
-              <ul class="info-list">
-                <li class="info-item">
-                  <p class="info-item-title">7-12%</p>
-                  <p class="info-item-text">прибутковість від здачі в оренду</p>
-                </li>
-                <li class="info-item">
-                  <p class="info-item-title">15-35%</p>
-                  <p class="info-item-text">прибутковість від перепродажу</p>
-                </li>
-                <li class="info-item">
-                  <p class="info-item-title">€500 тис</p>
-                  <p class="info-item-text">
-                    "Золота резиденція"при купівлі нерухомості на € 500 тис.
-                  </p>
-                </li>
-              </ul>
+              <div class="hero-info-content">
+                <ul class="target-list">
+                  <li class="target-item">
+                    <svg class="icon-target">
+                      <use href="./images/sprite.svg#icon-tick"></use>
+                    </svg>
+                    <p>Для відпочинку</p>
+                  </li>
+                  <li class="target-item">
+                    <svg class="icon-target">
+                      <use href="./images/sprite.svg#icon-tick"></use>
+                    </svg>
+                    <p>Для інвестицій</p>
+                  </li>
+                  <li class="target-item">
+                    <svg class="icon-target">
+                      <use href="./images/sprite.svg#icon-tick"></use>
+                    </svg>
+                    <p>Для життя</p>
+                  </li>
+                </ul>
+                <ul class="info-list">
+                  <li class="info-item">
+                    <p class="info-item-title">7-12%</p>
+                    <p class="info-item-text">
+                      прибутковість від здачі в оренду
+                    </p>
+                  </li>
+                  <li class="info-item">
+                    <p class="info-item-title">15-35%</p>
+                    <p class="info-item-text">прибутковість від перепродажу</p>
+                  </li>
+                  <li class="info-item">
+                    <p class="info-item-title">€500 тис</p>
+                    <p class="info-item-text">
+                      "Золота резиденція"при купівлі нерухомості на € 500 тис.
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="form-box">
               <h2 class="form-title">
@@ -204,14 +229,14 @@
                 </div>
                 <div class="actual-slider-ctrl">
                   <button class="actual-slider-btn-ctrl" type="button">
-                    <svg width="10" height="10">
+                    <svg class="actual-slider-icon">
                       <use
                         href="./images/sprite.svg#icon-slider-arrow-left"
                       ></use>
                     </svg>
                   </button>
                   <button class="actual-slider-btn-ctrl" type="button">
-                    <svg width="10" height="10">
+                    <svg class="actual-slider-icon">
                       <use
                         href="./images/sprite.svg#icon-slider-arrow-right"
                       ></use>
@@ -342,56 +367,55 @@
     </section>
 
     <section class="benefits">
-      <div class="container container-xl">
+      <div class=" container-xl">
         <div class="row">
           <div class="col-12">
-            <ul class="benefits-list">
-              <li class="benefits-list-item">
-                <div class="benefit-icon">
-                  <svg width="30" height="30">
-                    <use href="./images/sprite.svg#icon-benefit-first"></use>
-                  </svg>
-                </div>
-                <div class="benefit-text">
-                  <h3 class="benefit-item-title">+3000 пропозицій</h3>
-                  <p class="benefit-item-description">
-                    нерухомості для життя<br />
-                    та інвестицій від забудовників
-                  </p>
-                </div>
-              </li>
-              <li class="benefits-list-item">
-                <div class="benefit-icon">
-                  <svg width="33" height="29">
-                    <use href="./images/sprite.svg#icon-benefit-second"></use>
-                  </svg>
-                </div>
-                <div class="benefit-text">
-                  <h3 class="benefit-item-title">
-                    Без %<br />
-                    розстрочка
-                  </h3>
-                  <p class="benefit-item-description">
-                    Перший внесок від 10%<br />
-                    50% після здачі обєкту
-                  </p>
-                </div>
-              </li>
-              <li class="benefits-list-item">
-                <div class="benefit-icon">
-                  <svg width="29" height="31">
-                    <use href="./images/sprite.svg#icon-benefit-third"></use>
-                  </svg>
-                </div>
-                <div class="benefit-text">
-                  <h3 class="benefit-item-title">Ліквідне житло</h3>
-                  <p class="benefit-item-description">
-                    яке стабільно зростає в ціні<br />
-                    на 5-10% на рік
-                  </p>
-                </div>
-              </li>
-            </ul>
+            <div class="container">
+              <ul class="benefits-list">
+                <li class="benefits-list-item">
+                  <div class="benefit-icon">
+                    <svg class="benefit-icon-content">
+                      <use href="./images/sprite.svg#icon-benefit-first"></use>
+                    </svg>
+                  </div>
+                  <div class="benefit-text">
+                    <h3 class="benefit-item-title">+3000 пропозицій</h3>
+                    <p class="benefit-item-description">
+                      нерухомості для життя<br />
+                      та інвестицій від забудовників
+                    </p>
+                  </div>
+                </li>
+                <li class="benefits-list-item">
+                  <div class="benefit-icon">
+                    <svg class="benefit-icon-content">
+                      <use href="./images/sprite.svg#icon-benefit-second"></use>
+                    </svg>
+                  </div>
+                  <div class="benefit-text">
+                    <h3 class="benefit-item-title">Без % розстрочка</h3>
+                    <p class="benefit-item-description">
+                      Перший внесок від 10%<br />
+                      50% після здачі об'єкту
+                    </p>
+                  </div>
+                </li>
+                <li class="benefits-list-item">
+                  <div class="benefit-icon">
+                    <svg class="benefit-icon-content">
+                      <use href="./images/sprite.svg#icon-benefit-third"></use>
+                    </svg>
+                  </div>
+                  <div class="benefit-text">
+                    <h3 class="benefit-item-title">Ліквідне житло</h3>
+                    <p class="benefit-item-description">
+                      яке стабільно зростає в ціні<br />
+                      на 5-10% на рік
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -444,6 +468,33 @@
                 src="./images/objects/object-img.jpg"
                 alt="Коста Бланка"
               />
+              <div class="mobile-object-slider">
+                <div class="mobile-object-slider-ctrl">
+                  <button class="mobile-object-slider-btn-ctrl" type="button">
+                    <svg width="19" height="19">
+                      <use
+                        href="./images/sprite.svg#icon-slider-arrow-left"
+                      ></use>
+                    </svg>
+                  </button>
+                  <button class="mobile-object-slider-btn-ctrl" type="button">
+                    <svg width="19" height="19">
+                      <use
+                        href="./images/sprite.svg#icon-slider-arrow-right"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="mobile-object-slider-page">
+                  <span class="current-mobile-obj-page">01</span>/<span
+                    class="total-mobile-obj-pages"
+                    >05</span
+                  >
+                </p>
+              </div>
+              <button class="mobile-more-objects-button" type="button">
+                Показати більше об’єктів
+              </button>
             </div>
           </div>
         </div>
@@ -451,41 +502,43 @@
     </section>
 
     <section class="catalog">
-      <div class="container container-xl">
+      <div class="container-xl">
         <div class="row">
           <div class="col-12">
-            <h2 class="catalog-title">
-              Скачайте<br />актуальний каталог<br />нерухомості в Іспанії
-            </h2>
-            <ul class="catalog-benefits-list">
-              <li class="catalog-benefits-item">
-                <svg class="icon-target">
-                  <use href="./images/sprite.svg#icon-tick"></use>
-                </svg>
-                <p>Новобудови від 135 000€</p>
-              </li>
-              <li class="catalog-benefits-item">
-                <svg class="icon-target">
-                  <use href="./images/sprite.svg#icon-tick"></use>
-                </svg>
-                <p>+650 об'єктів безпосередньо від забудовників</p>
-              </li>
-              <li class="catalog-benefits-item">
-                <svg class="icon-target">
-                  <use href="./images/sprite.svg#icon-tick"></use>
-                </svg>
-                <p>Об'єкти на вторинному ринку від €69 000</p>
-              </li>
-              <li class="catalog-benefits-item">
-                <svg class="icon-target">
-                  <use href="./images/sprite.svg#icon-tick"></use>
-                </svg>
-                <p>Усе про процедуру купівлі нерухомості в Іспанії</p>
-              </li>
-            </ul>
-            <button class="catalog-button" type="button">
-              Завантажити каталог
-            </button>
+            <div class="container">
+              <h2 class="catalog-title">
+                Скачайте<br />актуальний каталог<br />нерухомості в Іспанії
+              </h2>
+              <ul class="catalog-benefits-list">
+                <li class="catalog-benefits-item">
+                  <svg class="catalog-icon-target">
+                    <use href="./images/sprite.svg#icon-tick"></use>
+                  </svg>
+                  <p>Новобудови від 135 000€</p>
+                </li>
+                <li class="catalog-benefits-item">
+                  <svg class="catalog-icon-target">
+                    <use href="./images/sprite.svg#icon-tick"></use>
+                  </svg>
+                  <p>+650 об'єктів безпосередньо від забудовників</p>
+                </li>
+                <li class="catalog-benefits-item">
+                  <svg class="catalog-icon-target">
+                    <use href="./images/sprite.svg#icon-tick"></use>
+                  </svg>
+                  <p>Об'єкти на вторинному ринку від €69 000</p>
+                </li>
+                <li class="catalog-benefits-item">
+                  <svg class="catalog-icon-target">
+                    <use href="./images/sprite.svg#icon-tick"></use>
+                  </svg>
+                  <p>Усе про процедуру купівлі нерухомості в Іспанії</p>
+                </li>
+              </ul>
+              <button class="catalog-button" type="button">
+                Завантажити каталог
+              </button>
+            </div>
           </div>
         </div>
       </div>
