@@ -138,6 +138,10 @@ form input {
     padding-top: 24px;
   }
 
+  .header .container {
+    width: 339px;
+  }
+
   .header .logo,
   .header .numbers,
   .nav-list {
@@ -161,6 +165,7 @@ form input {
     margin-bottom: 21px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   .header .top-bar {
@@ -192,7 +197,6 @@ form input {
   }
 
   .select-lang {
-    margin-left: 30px;
     color: #fff;
     font-size: 16px;
     font-weight: 700;
@@ -484,6 +488,9 @@ form input {
 
   .hero-container {
     position: relative;
+    width: 339px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* .hero-container::after {
@@ -1278,6 +1285,10 @@ form input {
   .objects {
     padding-top: 26px;
     padding-bottom: 21px;
+  }
+
+  .objects .container {
+    width: 339px;
   }
 
   .objects-label {
