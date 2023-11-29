@@ -243,6 +243,7 @@ form input {
 
   .header .logo {
     margin-top: auto;
+    margin-bottom: 3px;
   }
 
   .header .top-bar {
@@ -1749,6 +1750,9 @@ form input {
     background-position: center;
     background-size: cover;
     border-radius: 20px;
+  }
+  
+  .details .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
