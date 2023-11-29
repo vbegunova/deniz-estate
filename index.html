@@ -19,7 +19,7 @@
     <header class="header">
       <div class="container-xl">
         <div class="row">
-          <div class="col-12">
+          <div class="container col-12">
             <div class="menu">
               <a href="#" class="logo">
                 <svg width="219" height="29">
@@ -425,29 +425,62 @@
       <div class="container-xl">
         <div class="row">
           <div class="col-12">
-            <p class="objects-label">Новий комплекс у Коста Бланка, Іспанія</p>
-            <div class="object-card">
-              <div class="object-card-info">
-                <h2 class="object-title">
-                  Вілла 3 спальні 115 м² в Коста Бланке, Іспанія
-                </h2>
-                <p class="object-description">
-                  Житловий комплекс з двоквартирних та окремих вілл
-                </p>
-                <p class="object-price">399 950 €</p>
-                <button class="more-objects-button" type="button">
-                  Показати більше об’єктів
-                </button>
-                <div class="object-slider">
-                  <div class="object-slider-ctrl">
-                    <button class="object-slider-btn-ctrl" type="button">
+            <div class="container">
+              <p class="objects-label">
+                Новий комплекс у Коста Бланка, Іспанія
+              </p>
+              <div class="object-card">
+                <div class="object-card-info">
+                  <h2 class="object-title">
+                    Вілла 3 спальні 115 м² в Коста Бланке, Іспанія
+                  </h2>
+                  <p class="object-description">
+                    Житловий комплекс з двоквартирних та окремих вілл
+                  </p>
+                  <p class="object-price">399 950 €</p>
+                  <button class="more-objects-button" type="button">
+                    Показати більше об’єктів
+                  </button>
+                  <div class="object-slider">
+                    <div class="object-slider-ctrl">
+                      <button class="object-slider-btn-ctrl" type="button">
+                        <svg width="19" height="19">
+                          <use
+                            href="./images/sprite.svg#icon-slider-arrow-left"
+                          ></use>
+                        </svg>
+                      </button>
+                      <button class="object-slider-btn-ctrl" type="button">
+                        <svg width="19" height="19">
+                          <use
+                            href="./images/sprite.svg#icon-slider-arrow-right"
+                          ></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="object-slider-page">
+                      <span class="current-obj-page">01</span>/<span
+                        class="total-obj-pages"
+                        >05</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <img
+                  class="img-obj"
+                  src="./images/objects/object-img.jpg"
+                  alt="Коста Бланка"
+                />
+                <div class="mobile-object-slider">
+                  <div class="mobile-object-slider-ctrl">
+                    <button class="mobile-object-slider-btn-ctrl" type="button">
                       <svg width="19" height="19">
                         <use
                           href="./images/sprite.svg#icon-slider-arrow-left"
                         ></use>
                       </svg>
                     </button>
-                    <button class="object-slider-btn-ctrl" type="button">
+                    <button class="mobile-object-slider-btn-ctrl" type="button">
                       <svg width="19" height="19">
                         <use
                           href="./images/sprite.svg#icon-slider-arrow-right"
@@ -455,46 +488,17 @@
                       </svg>
                     </button>
                   </div>
-                  <p class="object-slider-page">
-                    <span class="current-obj-page">01</span>/<span
-                      class="total-obj-pages"
+                  <p class="mobile-object-slider-page">
+                    <span class="current-mobile-obj-page">01</span>/<span
+                      class="total-mobile-obj-pages"
                       >05</span
                     >
                   </p>
                 </div>
+                <button class="mobile-more-objects-button" type="button">
+                  Показати більше об’єктів
+                </button>
               </div>
-              <img
-                class="img-obj"
-                src="./images/objects/object-img.jpg"
-                alt="Коста Бланка"
-              />
-              <div class="mobile-object-slider">
-                <div class="mobile-object-slider-ctrl">
-                  <button class="mobile-object-slider-btn-ctrl" type="button">
-                    <svg width="19" height="19">
-                      <use
-                        href="./images/sprite.svg#icon-slider-arrow-left"
-                      ></use>
-                    </svg>
-                  </button>
-                  <button class="mobile-object-slider-btn-ctrl" type="button">
-                    <svg width="19" height="19">
-                      <use
-                        href="./images/sprite.svg#icon-slider-arrow-right"
-                      ></use>
-                    </svg>
-                  </button>
-                </div>
-                <p class="mobile-object-slider-page">
-                  <span class="current-mobile-obj-page">01</span>/<span
-                    class="total-mobile-obj-pages"
-                    >05</span
-                  >
-                </p>
-              </div>
-              <button class="mobile-more-objects-button" type="button">
-                Показати більше об’єктів
-              </button>
             </div>
           </div>
         </div>
@@ -557,15 +561,17 @@
                     Детальніше про розстрочку при купівлі новобудови в Іспанії
                   </h2>
                   <p class="details-text">
-                    При купівлі об'єкта в розстрочку потрібно внести перший внесок
-                    у розмірі 10%, а залишок ділиться на рівні частини до
+                    При купівлі об'єкта в розстрочку потрібно внести перший
+                    внесок у розмірі 10%, а залишок ділиться на рівні частини до
                     закінчення будівництва.
                   </p>
                   <ul class="details-list">
                     <li class="detail-item">
                       <div class="detail-icon-container">
                         <svg width="26" height="22" class="detail-icon">
-                          <use href="./images/sprite.svg#icon-service-tick"></use>
+                          <use
+                            href="./images/sprite.svg#icon-service-tick"
+                          ></use>
                         </svg>
                       </div>
                       <div class="details-item-text-content">
@@ -578,7 +584,9 @@
                     <li class="detail-item">
                       <div class="detail-icon-container">
                         <svg width="26" height="22" class="detail-icon">
-                          <use href="./images/sprite.svg#icon-service-tick"></use>
+                          <use
+                            href="./images/sprite.svg#icon-service-tick"
+                          ></use>
                         </svg>
                       </div>
                       <div class="details-item-text-content">
@@ -592,7 +600,9 @@
                     <li class="detail-item">
                       <div class="detail-icon-container">
                         <svg width="26" height="22" class="detail-icon">
-                          <use href="./images/sprite.svg#icon-service-tick"></use>
+                          <use
+                            href="./images/sprite.svg#icon-service-tick"
+                          ></use>
                         </svg>
                       </div>
                       <p class="details-item-text">
@@ -602,7 +612,9 @@
                     <li class="detail-item">
                       <div class="detail-icon-container">
                         <svg width="26" height="22" class="detail-icon">
-                          <use href="./images/sprite.svg#icon-service-tick"></use>
+                          <use
+                            href="./images/sprite.svg#icon-service-tick"
+                          ></use>
                         </svg>
                       </div>
                       <p class="details-item-text">Диверсифікуєте капітал</p>
@@ -610,7 +622,9 @@
                     <li class="detail-item">
                       <div class="detail-icon-container">
                         <svg width="26" height="22" class="detail-icon">
-                          <use href="./images/sprite.svg#icon-service-tick"></use>
+                          <use
+                            href="./images/sprite.svg#icon-service-tick"
+                          ></use>
                         </svg>
                       </div>
                       <p class="details-item-text">
@@ -620,7 +634,9 @@
                     <li class="detail-item">
                       <div class="detail-icon-container">
                         <svg width="26" height="22" class="detail-icon">
-                          <use href="./images/sprite.svg#icon-service-tick"></use>
+                          <use
+                            href="./images/sprite.svg#icon-service-tick"
+                          ></use>
                         </svg>
                       </div>
                       <p class="details-item-text">
@@ -1561,57 +1577,57 @@
           <div class="col-12">
             <div class="container">
               <div class="line"></div>
-            <div class="footer-content">
-              <a href="#" class="footer-logo">
-                <svg class="footer-logo-icon" width="352" height="49">
-                  <use href="./images/sprite.svg#icon-footer-logo"></use>
-                </svg>
-              </a>
-              <div class="footer-contacts-first-col">
-                <h2 class="footer-contacts-title">Контакти</h2>
-                <p class="footer-address">
-                  Іспанія, Аліканте, м.Торрев'єха, Paseo Vistalegre, 3, 03181
-                </p>
-                <p class="footer-address">
-                  Cl Terral ‘Atrium beach’ No 6, Bloq. 3 Esc. 3 5 G Benidorm
-                </p>
+              <div class="footer-content">
+                <a href="#" class="footer-logo">
+                  <svg class="footer-logo-icon" width="352" height="49">
+                    <use href="./images/sprite.svg#icon-footer-logo"></use>
+                  </svg>
+                </a>
+                <div class="footer-contacts-first-col">
+                  <h2 class="footer-contacts-title">Контакти</h2>
+                  <p class="footer-address">
+                    Іспанія, Аліканте, м.Торрев'єха, Paseo Vistalegre, 3, 03181
+                  </p>
+                  <p class="footer-address">
+                    Cl Terral ‘Atrium beach’ No 6, Bloq. 3 Esc. 3 5 G Benidorm
+                  </p>
+                </div>
+                <div class="footer-contacts-second-col">
+                  <ul class="phone-numbers-list">
+                    <li class="phone-number-item">
+                      <p class="phone-number">+34 (645) 444 950</p>
+                    </li>
+                    <li class="phone-number-item">
+                      <p class="phone-number">+38 (067) 343 49 90</p>
+                    </li>
+                    <li class="phone-number-item">
+                      <p class="phone-number">+34 604 29 76 97</p>
+                    </li>
+                  </ul>
+                  <p class="footer-contacts-email">info@deniz-estate.com</p>
+                </div>
+                <div class="footer-contacts-soc-media">
+                  <p class="footer-soc-media-title">Наші соц.мережі</p>
+                  <ul class="footer-soc-media-list">
+                    <li class="footer-soc-media-item">
+                      <svg width="15" height="14">
+                        <use href="./images/sprite.svg#icon-telegram"></use>
+                      </svg>
+                    </li>
+                    <li class="footer-soc-media-item">
+                      <svg width="16" height="18">
+                        <use href="./images/sprite.svg#icon-viber"></use>
+                      </svg>
+                    </li>
+                    <li class="footer-soc-media-item">
+                      <svg width="16" height="16">
+                        <use href="./images/sprite.svg#icon-whatsapp"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="footer-contacts-second-col">
-                <ul class="phone-numbers-list">
-                  <li class="phone-number-item">
-                    <p class="phone-number">+34 (645) 444 950</p>
-                  </li>
-                  <li class="phone-number-item">
-                    <p class="phone-number">+38 (067) 343 49 90</p>
-                  </li>
-                  <li class="phone-number-item">
-                    <p class="phone-number">+34 604 29 76 97</p>
-                  </li>
-                </ul>
-                <p class="footer-contacts-email">info@deniz-estate.com</p>
-              </div>
-              <div class="footer-contacts-soc-media">
-                <p class="footer-soc-media-title">Наші соц.мережі</p>
-                <ul class="footer-soc-media-list">
-                  <li class="footer-soc-media-item">
-                    <svg width="15" height="14">
-                      <use href="./images/sprite.svg#icon-telegram"></use>
-                    </svg>
-                  </li>
-                  <li class="footer-soc-media-item">
-                    <svg width="16" height="18">
-                      <use href="./images/sprite.svg#icon-viber"></use>
-                    </svg>
-                  </li>
-                  <li class="footer-soc-media-item">
-                    <svg width="16" height="16">
-                      <use href="./images/sprite.svg#icon-whatsapp"></use>
-                    </svg>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="line"></div>
+              <div class="line"></div>
             </div>
           </div>
         </div>
