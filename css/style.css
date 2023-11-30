@@ -4317,6 +4317,7 @@ form input {
 
   .process-tab-item {
     padding-left: 28px;
+    padding-right: 28px;
     display: flex;
     align-items: center;
     gap: 15px;
