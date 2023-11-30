@@ -2260,7 +2260,112 @@ form input {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .help {
+    margin-bottom: 58px;
+    overflow-x: hidden;
+  }
+
+  .help .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .help-title {
+    margin-bottom: 32px;
+    width: 580px;
+    color: #1c2445;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .help-content {
+    position: relative;
+    display: flex;
+    gap: 20px;
+  }
+
+  .help-box {
+    max-width: 355px;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 48px;
+    padding-left: 34px;
+    border-radius: 20px;
+  }
+
+  .help-box.online {
+    padding-right: 43px;
+    color: #fff;
+    background-image: linear-gradient(180deg, #2d4d76 0%, #1c2445 100%);
+  }
+
+  .help-box.offline {
+    color: #2d4d76;
+    background-image: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(255, 255, 255, 0.6) 100%
+      ),
+      linear-gradient(180deg, #8dc8e5 0%, #d6effc 100%);
+  }
+
+  .help-box-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .offline .help-box-title,
+  .offline .help-box-subtitle {
+    color: #263c62;
+  }
+
+  .help-box-subtitle {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .help-box-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .help-box-item {
+    display: flex;
+    gap: 8px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .help-box-item p {
+    margin-top: 3px;
+    width: 270px;
+  }
+
+  .help-icon-target {
+    width: 24px;
+    height: 24px;
+    padding: 7px;
+    background-color: #b6d9ed;
+    border-radius: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
   .help {
     margin-bottom: 58px;
     overflow-x: hidden;
@@ -2857,7 +2962,6 @@ form input {
   }
 
 }
-
 
 @media screen and (min-width: 1400px) {
   .privileges {
