@@ -1734,6 +1734,11 @@ form input {
     width: calc(100% - 30px * 2 / 3);
   }
 
+  .actual-list-item:nth-child(4),
+  .actual-list-item:nth-child(5) {
+    display: none;
+  }
+
   .label-hot {
     position: absolute;
     top: 12px;
@@ -1995,6 +2000,11 @@ form input {
   .actual-list-item {
     position: relative;
     width: calc(100% - 30px * 2 / 3);
+  }
+
+  .actual-list-item:nth-child(4),
+  .actual-list-item:nth-child(5) {
+    display: none;
   }
 
   .label-hot {
