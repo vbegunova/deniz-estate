@@ -7775,6 +7775,24 @@ form input {
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .arguments-slider {
+    width: 4916px;
+  }
+
+  .arguments-slider-box {
+    width: 604px;
+  }
+  
+  .arguments-slider-text {
+    width: 100%;
+  }
+
+  .arguments-slider-ctrl {
+    width: 525px;
+  }
+}
+
 /* Consult */
 @media screen and (max-width: 767px) {
   .consult {
