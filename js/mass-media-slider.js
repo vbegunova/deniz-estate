@@ -14,6 +14,14 @@ let videoCurrentIndex = 0;
 prevBtn.disabled = true;
 
 prevBtn.addEventListener("click", () => {
+  massPrevSlide();
+});
+
+nextBtn.addEventListener("click", () => {
+  masNextSlide();
+});
+
+function massPrevSlide() {
   if (videoCurrentIndex > 0) {
     videoCurrentIndex--;
     nextBtn.disabled = false;
@@ -25,9 +33,9 @@ prevBtn.addEventListener("click", () => {
   if (videoCurrentIndex === 0) {
     prevBtn.disabled = true;
   }
-});
+}
 
-nextBtn.addEventListener("click", () => {
+function masNextSlide() {
   if (videoCurrentIndex < clicksCount) {
     videoCurrentIndex++;
     prevBtn.disabled = false;
@@ -40,10 +48,23 @@ nextBtn.addEventListener("click", () => {
   if (videoCurrentIndex === clicksCount) {
     nextBtn.disabled = true;
   }
-});
+}
 
 slideList.addEventListener("transitionend", () => {
   slidesMassMedia.forEach((slide) => {
     slide.style.transition = "";
   });
+});
+
+slideList.addEventListener("touchstart", (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+
+slideList.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+  if (touchEndX < touchStartX) {
+    masNextSlide();
+  } else if (touchEndX > touchStartX) {
+    massPrevSlide();
+  }
 });

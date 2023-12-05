@@ -37,6 +37,7 @@ const slides = [
   },
 ];
 
+const objectSection = document.querySelector(".objects");
 const objectLabel = document.querySelector(".objects-label");
 const objectTitle = document.querySelector(".object-title");
 const objectDescription = document.querySelector(".object-description");
@@ -114,6 +115,19 @@ mobileObjectSliderPrev.addEventListener("click", () => {
 
 mobileObjectSliderNext.addEventListener("click", () => {
   slideButtonClick("next");
+});
+
+objectSection.addEventListener("touchstart", (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+
+objectSection.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+  if (touchEndX < touchStartX) {
+    slideButtonClick("next");
+  } else if (touchEndX > touchStartX) {
+    slideButtonClick("prev");
+  }
 });
 
 updateSlide(currentIndex);

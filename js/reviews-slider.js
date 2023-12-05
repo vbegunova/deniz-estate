@@ -18,6 +18,9 @@ if (window.innerWidth >= 992) {
 const revSlideWidht = reviewsSlides[0].offsetWidth;
 let reviewCurrentIndex = 0;
 
+let touchStartX = 0;
+let touchEndX = 0;
+
 revPrevBtn.disabled = true;
 
 reviewsSlides.forEach((slide, index) => {
@@ -64,19 +67,14 @@ function showSlide(index) {
 }
 
 revPrevBtn.addEventListener("click", () => {
-  if (reviewCurrentIndex > 0) {
-    reviewCurrentIndex--;
-    setActiveDot(reviewCurrentIndex);
-    revNextBtn.disabled = false;
-    showSlide(reviewCurrentIndex);
-  }
-
-  if (reviewCurrentIndex === 0) {
-    revPrevBtn.disabled = true;
-  }
+  prevSlide();
 });
 
 revNextBtn.addEventListener("click", () => {
+  nextSlide();
+});
+
+function nextSlide() {
   if (reviewCurrentIndex < revClickCount) {
     reviewCurrentIndex++;
     setActiveDot(reviewCurrentIndex);
@@ -87,10 +85,36 @@ revNextBtn.addEventListener("click", () => {
   if (reviewCurrentIndex === revClickCount) {
     revNextBtn.disabled = true;
   }
-});
+}
+
+function prevSlide() {
+  if (reviewCurrentIndex > 0) {
+    reviewCurrentIndex--;
+    setActiveDot(reviewCurrentIndex);
+    revNextBtn.disabled = false;
+    showSlide(reviewCurrentIndex);
+  }
+
+  if (reviewCurrentIndex === 0) {
+    revPrevBtn.disabled = true;
+  }
+}
 
 reviewsSlideList.addEventListener("transitionend", () => {
   reviewsSlides.forEach((slide) => {
     slide.style.transition = "";
   });
+});
+
+reviewsSlideList.addEventListener("touchstart", (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+
+reviewsSlideList.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+  if (touchEndX < touchStartX) {
+    nextSlide();
+  } else if (touchEndX > touchStartX) {
+    prevSlide();
+  }
 });
