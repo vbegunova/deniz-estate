@@ -6928,6 +6928,7 @@ form input {
   .mass-media-item {
     display: block;
     text-align: center;
+    cursor: pointer;
   }
 
   .video-img {
@@ -7062,6 +7063,7 @@ form input {
   .mass-media-item {
     display: block;
     text-align: center;
+    cursor: pointer;
   }
 
   .video-img {
@@ -7201,6 +7203,7 @@ form input {
   .mass-media-item {
     width: 310px;
     text-align: center;
+    cursor: pointer;
   }
 
   .video-img {
@@ -7292,6 +7295,7 @@ form input {
   .mass-media-item {
     width: 404px;
     text-align: center;
+    cursor: pointer;
   }
 
   .video-img {
