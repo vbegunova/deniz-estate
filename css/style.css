@@ -90,16 +90,34 @@ img {
 
 button {
   cursor: pointer;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
 }
 
 form input {
   font-size: 12px;
 }
 
+label {
+  cursor: pointer;
+}
+
 /* Header */
 .header a {
   color: #fff;
   cursor: pointer;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header a:hover {
+  color: #a1b9d8;
 }
 
 .header {
@@ -592,7 +610,7 @@ form input {
       rgba(28, 36, 69, 0.8) 100%
     ),
     linear-gradient(270deg, rgba(45, 77, 118, 0) 0%, #1c2445 100%),
-    url("../images/hero-background-desktop.jpg");
+    url("../images/hero-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1243,7 +1261,6 @@ form input {
   }
 
   .actual-slider-ctrl {
-    margin-left: auto;
     display: flex;
     gap: 2px;
   }
@@ -4585,7 +4602,7 @@ form input {
         rgba(141, 200, 229, 0.61) -88.07%,
         #2d4d76 101.76%
       ),
-      url("../images/hero-background-desktop.jpg"),
+      url("../images/hero-background.jpg"),
       linear-gradient(180deg, #8dc8e5 0%, #2d4d76 100%),
       linear-gradient(
         0deg,
@@ -4709,7 +4726,7 @@ form input {
         rgba(141, 200, 229, 0.61) -0.06%,
         #2d4d76 77.11%
       ),
-      url("../images/hero-background-desktop.jpg"),
+      url("../images/hero-background.jpg"),
       linear-gradient(180deg, #8dc8e5 0%, #2d4d76 100%),
       linear-gradient(
         0deg,
@@ -4749,7 +4766,9 @@ form input {
   }
 
   .answers-box {
+    margin-bottom: 13px;
     display: flex;
+    flex-wrap: wrap;
     gap: 13px;
   }
 
@@ -4763,7 +4782,6 @@ form input {
   }
 
   .quiz-radio-button {
-    margin-top: 1px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -4804,6 +4822,12 @@ form input {
     width: 8px;
     height: 8px;
     border-radius: 50%;
+  }
+
+  .quiz-ctrl-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .quiz-progress-box {
@@ -4964,7 +4988,7 @@ form input {
         rgba(141, 200, 229, 0.61) -0.06%,
         #2d4d76 77.11%
       ),
-      url("../images/hero-background-desktop.jpg"),
+      url("../images/hero-background.jpg"),
       linear-gradient(180deg, #8dc8e5 0%, #2d4d76 100%),
       linear-gradient(
         0deg,
@@ -5004,7 +5028,9 @@ form input {
   }
 
   .answers-box {
+    margin-bottom: 13px;
     display: flex;
+    flex-wrap: wrap;
     gap: 13px;
   }
 
@@ -5059,6 +5085,12 @@ form input {
     width: 8px;
     height: 8px;
     border-radius: 50%;
+  }
+
+  .quiz-ctrl-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .quiz-progress-box {
@@ -5208,6 +5240,21 @@ form input {
   .choice {
     margin-bottom: 132px;
   }
+}
+
+.qa-step {
+  display: none;
+}
+
+.qa-step.active {
+  display: block;
+}
+
+.quiz-error {
+  display: none;
+  margin-bottom: 14px;
+  font-size: 8px;
+  color: red;
 }
 
 /* Trust */

@@ -29,6 +29,9 @@ const openThirdVideoModalBtn = document.querySelector(".video-img.third");
 const closeThirdVideoModalBtn = document.querySelector(".video-third .cross-button");
 const thirdVideoModal = document.querySelector(".video-third.backdrop");
 
+const closeQuizModalBtn = document.querySelector(".quiz .cross-button");
+const quizModal = document.querySelector(".quiz.backdrop");
+
 openCallModalBtn.addEventListener("click", () => toggleModal(callModal));
 closeCallModalBtn.addEventListener("click", () => toggleModal(callModal));
 
@@ -42,6 +45,8 @@ closeCatalogModalBtn.addEventListener("click", () => toggleModal(catalogModal));
 
 openConsultModalBtn.addEventListener("click", () => toggleModal(consultModal));
 closeConsultModalBtn.addEventListener("click", () => toggleModal(consultModal));
+
+closeQuizModalBtn.addEventListener("click", () => toggleModal(quizModal));
 
 openFirstVideoModalBtn.addEventListener("click", () => toggleModal(firstVideoModal));
 closeFirstVideoModalBtn.addEventListener("click", () => toggleModal(firstVideoModal));

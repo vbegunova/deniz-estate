@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Deniz Estate</title>
     <link
       rel="stylesheet"
       id="bootstrap_grid-css"
@@ -306,7 +306,7 @@
                     Актуальні об'єкти нерухомості в листопаді
                   </h2>
                   <div class="filter">
-                    <div class="filter-input">
+                    <!-- <div class="filter-input">
                       Сортувати
                       <svg class="filter-icon-arrow" width="8" height="9">
                         <use
@@ -322,7 +322,7 @@
                     <div class="filter-currency">
                       <div class="currency-item active"><span>€</span></div>
                       <div class="currency-item"><span>$</span></div>
-                    </div>
+                    </div> -->
                     <div class="actual-slider-ctrl">
                       <button class="actual-slider-btn-ctrl" type="button">
                         <svg class="actual-slider-icon">
@@ -1088,7 +1088,7 @@
               <div class="choice-container">
                 <div class="quiz-container">
                   <div class="quiz-content">
-                    <div class="qa-box">
+                    <div class="qa-step active">
                       <h3 class="question-title">
                         З якою метою ви плануєте купівлю нерухомості?
                       </h3>
@@ -1126,7 +1126,266 @@
                           Для інвестицій</label
                         >
                       </div>
+                      <p class="quiz-error">Оберіть один варіант відповіді</p>
                     </div>
+                    <div class="qa-step">
+                      <h3 class="question-title">
+                        Який тип нерухомості вас цікавить?
+                      </h3>
+                      <div class="answers-box">
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-type"
+                            value="vacation"
+                          />
+                          Квартира/Апартаменти</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-type"
+                            value="life"
+                          />
+                          Будинок/Вілла</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-type"
+                            value="investment"
+                          />
+                          Студія</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-type"
+                            value="investment"
+                          />
+                          Інше</label
+                        >
+                      </div>
+                      <p class="quiz-error">Оберіть один варіант відповіді</p>
+                    </div>
+                    <div class="qa-step">
+                      <h3 class="question-title">
+                        Яке узбережжя ви розглядаєте для купівлі?
+                      </h3>
+                      <div class="answers-box">
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-city"
+                            value="vacation"
+                          />
+                          Коста-Брава</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-city"
+                            value="life"
+                          />
+                          Барселона</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-city"
+                            value="investment"
+                          />
+                          Коста-Дорада</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-city"
+                            value="investment"
+                          />
+                          Коста-Бланка</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-city"
+                            value="investment"
+                          />
+                          Ще не визначився (-ась)</label
+                        >
+                      </div>
+                      <p class="quiz-error">Оберіть один варіант відповіді</p>
+                    </div>
+                    <div class="qa-step">
+                      <h3 class="question-title">
+                        У якому бюджеті ви розглядаєте покупку?
+                      </h3>
+                      <div class="answers-box">
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-price"
+                            value="vacation"
+                          />
+                          80 – 120 тис. євро</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-price"
+                            value="life"
+                          />
+                          150 – 300 тис. євро</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-price"
+                            value="investment"
+                          />
+                          300 – 500 тис. євро</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-price"
+                            value="investment"
+                          />
+                          + 500 тис. євро</label
+                        >
+                      </div>
+                      <p class="quiz-error">Оберіть один варіант відповіді</p>
+                    </div>
+                    <div class="qa-step">
+                      <h3 class="question-title">
+                        Яку кількість спалень ви розглядаєте?
+                      </h3>
+                      <div class="answers-box">
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-beds"
+                            value="vacation"
+                          />
+                          1 спальня</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-beds"
+                            value="life"
+                          />
+                          2 спальні</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-beds"
+                            value="investment"
+                          />
+                          3 спальні</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-beds"
+                            value="investment"
+                          />
+                          4 і більше</label
+                        >
+                      </div>
+                      <p class="quiz-error">Оберіть один варіант відповіді</p>
+                    </div>
+                    <div class="qa-step">
+                      <h3 class="question-title">
+                        Які критерії важливі для вас під час вибору нерухомості?
+                      </h3>
+                      <div class="answers-box">
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-plus"
+                            value="vacation"
+                          />
+                          Близькість пляжу і вид на море (1,2 лінія)</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-plus"
+                            value="life"
+                          />
+                          Тераса</label
+                        >
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="prop-plus"
+                            value="investment"
+                          />
+                          Гараж</label
+                        >
+                      </div>
+                      <p class="quiz-error">Оберіть один варіант відповіді</p>
+                    </div>
+                    <div class="qa-step">
+                      <h3 class="question-title">
+                        У який термін ви плануєте покупку?
+                      </h3>
+                      <div class="answers-box">
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="period"
+                            value="vacation"
+                          />
+                          До 3 місяців</label
+                        >
+
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="period"
+                            value="life"
+                          />
+                          До 6 місяців</label
+                        >
+
+                        <label class="answer-item">
+                          <input
+                            class="quiz-radio-button"
+                            type="radio"
+                            name="period"
+                            value="investment"
+                          />
+                          Поки не визначився, тільки придивляюся</label
+                        >
+                      </div>
+                      <p class="quiz-error">Оберіть один варіант відповіді</p>
+                    </div>
+
                     <div class="quiz-ctrl-box">
                       <div class="quiz-progress-box">
                         <p class="quiz-slider-page">
@@ -1892,19 +2151,37 @@
                     </p>
                     <ul class="consult-soc-media-list">
                       <li class="consult-soc-media-item">
-                        <svg width="18" height="16">
-                          <use href="./images/sprite.svg#icon-telegram"></use>
-                        </svg>
+                        <a
+                        href="https://t.me/Deniz_Estate_bot"
+                        target="blank"
+                        rel="noreferrer noopener"
+                      >
+                          <svg width="18" height="16">
+                            <use href="./images/sprite.svg#icon-telegram"></use>
+                          </svg>
+                        </a>
                       </li>
                       <li class="consult-soc-media-item">
-                        <svg width="19" height="21">
-                          <use href="./images/sprite.svg#icon-viber"></use>
-                        </svg>
+                        <a
+                        href="viber://pa?chatURI=deniz_estate"
+                        target="blank"
+                        rel="noreferrer noopener"
+                      >
+                          <svg width="19" height="21">
+                            <use href="./images/sprite.svg#icon-viber"></use>
+                          </svg>
+                        </a>
                       </li>
                       <li class="consult-soc-media-item">
-                        <svg width="19" height="19">
-                          <use href="./images/sprite.svg#icon-whatsapp"></use>
-                        </svg>
+                        <a
+                        href="https://api.whatsapp.com/send/?phone=380673434990&text=%D0%92%D1%96%D1%82%D0%B0%D1%8E%21+%D0%9C%D0%B5%D0%BD%D1%96+%D0%BF%D0%BE%D1%82%D1%80%D1%96%D0%B1%D0%BD%D0%B0+%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D1%96%D1%8F+%D0%B7+%D0%BA%D1%83%D0%BF%D1%96%D0%B2%D0%BB%D1%96+%D0%BD%D0%B5%D1%80%D1%83%D1%85%D0%BE%D0%BC%D0%BE%D1%81%D1%82%D1%96"
+                        target="blank"
+                        rel="noreferrer noopener"
+                      >
+                          <svg width="19" height="19">
+                            <use href="./images/sprite.svg#icon-whatsapp"></use>
+                          </svg>
+                        </a>
                       </li>
                     </ul>
                     <form class="hero-form">
@@ -1968,12 +2245,12 @@
               <input
                 class="checkbox"
                 type="checkbox"
-                id="hero-checkbox"
+                id="order-call"
                 name="checkbox"
                 value="checkbox"
                 checked
               />
-              <label for="hero-checkbox" class="checkbox-label"
+              <label for="order-call" class="checkbox-label"
                 >Я згоден з правилами обробки персональних даних та політикою
                 конфіденційності Deniz-Estate</label
               >
@@ -2009,12 +2286,12 @@
               <input
                 class="checkbox"
                 type="checkbox"
-                id="hero-checkbox"
+                id="download-catalog"
                 name="checkbox"
                 value="checkbox"
                 checked
               />
-              <label for="hero-checkbox" class="checkbox-label"
+              <label for="download-catalog" class="checkbox-label"
                 >Я згоден з правилами обробки персональних даних та політикою
                 конфіденційності Deniz-Estate</label
               >
@@ -2048,18 +2325,57 @@
               <input
                 class="checkbox"
                 type="checkbox"
-                id="hero-checkbox"
+                id="consult"
                 name="checkbox"
                 value="checkbox"
                 checked
               />
-              <label for="hero-checkbox" class="checkbox-label"
+              <label for="consult" class="checkbox-label"
                 >Я згоден з правилами обробки персональних даних та політикою
                 конфіденційності Deniz-Estate</label
               >
             </div>
             <button class="hero-submit-button" type="submit">
               Залишити заявку
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="quiz backdrop is-hidden">
+        <div class="modal-container">
+          <button type="button" class="cross-button">
+            <svg class="cross-icon">
+              <use href="./images/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <h2 class="modal-title">
+            Ми надішлемо вам добірку актуальних об'єктів за вашими критеріями
+          </h2>
+          <form class="hero-form">
+            <input class="hero-form-input" type="text" placeholder="Ім'я" />
+            <input class="hero-form-input" type="email" placeholder="Email" />
+            <input
+              class="hero-form-input"
+              type="phone"
+              placeholder="Номер телефону"
+            />
+            <div class="hero-checkbox-container">
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="quiz"
+                name="checkbox"
+                value="checkbox"
+                checked
+              />
+              <label for="quiz" class="checkbox-label"
+                >Я згоден з правилами обробки персональних даних та політикою
+                конфіденційності Deniz-Estate</label
+              >
+            </div>
+            <button class="hero-submit-button" type="submit">
+              Отримати консультацію
             </button>
           </form>
         </div>
@@ -2166,11 +2482,11 @@
                         href="https://t.me/Deniz_Estate_bot"
                         target="blank"
                         rel="noreferrer noopener"
-                        ><svg width="15" height="14">
-                          <use
-                            href="./images/sprite.svg#icon-telegram"
-                          ></use></svg
-                      ></a>
+                      >
+                        <svg width="15" height="14">
+                          <use href="./images/sprite.svg#icon-telegram"></use>
+                        </svg>
+                      </a>
                     </li>
                     <li class="footer-soc-media-item">
                       <a
@@ -2186,6 +2502,8 @@
                     <li class="footer-soc-media-item">
                       <a
                         href="https://api.whatsapp.com/send/?phone=380673434990&text=%D0%92%D1%96%D1%82%D0%B0%D1%8E%21+%D0%9C%D0%B5%D0%BD%D1%96+%D0%BF%D0%BE%D1%82%D1%80%D1%96%D0%B1%D0%BD%D0%B0+%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D1%96%D1%8F+%D0%B7+%D0%BA%D1%83%D0%BF%D1%96%D0%B2%D0%BB%D1%96+%D0%BD%D0%B5%D1%80%D1%83%D1%85%D0%BE%D0%BC%D0%BE%D1%81%D1%82%D1%96"
+                        target="blank"
+                        rel="noreferrer noopener"
                       >
                         <svg width="16" height="16">
                           <use href="./images/sprite.svg#icon-whatsapp"></use>
@@ -2207,5 +2525,6 @@
     <script src="./js/mass-media-slider.js"></script>
     <script src="./js/arguments-slider.js"></script>
     <script src="./js/reviews-slider.js"></script>
+    <script src="./js/quiz.js"></script>
   </body>
 </html>
