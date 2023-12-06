@@ -6992,7 +6992,7 @@ label {
     border-radius: 14px;
   }
 
-  .mass-media-item:nth-child(1) .video-img {
+  /* .mass-media-item:nth-child(1) .video-img {
     background-image: url('../images/mass-media/video-first.jpg');
   }
 
@@ -7002,6 +7002,11 @@ label {
 
   .mass-media-item:nth-child(3) .video-img {
     background-image: url('../images/mass-media/video-third.jpg');
+  } */
+
+  .mass-media .video-frame {
+    width: 300px;
+    height: 168px;
   }
 
   .video-title {
@@ -7023,7 +7028,7 @@ label {
   }
 
   .icon-play {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -7035,7 +7040,8 @@ label {
     height: 52px;
     border-radius: 50%;
     background: #2d4d76;
-    box-shadow: 0px 4px 54px 0px #000;
+    box-shadow: 0px 4px 54px 0px #000; */
+    display: none;
   }
 
   .icon-play-content {
@@ -7127,7 +7133,12 @@ label {
     border-radius: 14px;
   }
 
-  .mass-media-item:nth-child(1) .video-img {
+  .mass-media .video-frame {
+    width: 400px;
+    height: 224px;
+  }
+
+  /* .mass-media-item:nth-child(1) .video-img {
     background-image: url('../images/mass-media/video-first.jpg');
   }
 
@@ -7137,7 +7148,7 @@ label {
 
   .mass-media-item:nth-child(3) .video-img {
     background-image: url('../images/mass-media/video-third.jpg');
-  }
+  } */
 
   .video-title {
     margin-bottom: 2px;
@@ -7158,7 +7169,7 @@ label {
   }
 
   .icon-play {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -7170,7 +7181,8 @@ label {
     height: 52px;
     border-radius: 50%;
     background: #2d4d76;
-    box-shadow: 0px 4px 54px 0px #000;
+    box-shadow: 0px 4px 54px 0px #000; */
+    display: none;
   }
 
   .icon-play-content {
@@ -7267,6 +7279,10 @@ label {
     border-radius: 14px;
   }
 
+  .mass-media .video-frame {
+    display: none;
+  }
+
   .mass-media-item:nth-child(1) .video-img {
     background-image: url('../images/mass-media/video-first.jpg');
   }
@@ -7356,6 +7372,10 @@ label {
     background-size: cover;
     margin-bottom: 8px;
     border-radius: 20px;
+  }
+
+  .mass-media .video-frame {
+    display: none;
   }
 
   .mass-media-item:nth-child(1) .video-img {
