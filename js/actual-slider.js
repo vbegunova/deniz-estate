@@ -1,125 +1,80 @@
-if (window.innerWidth <= 767) {
-  const slides = document.querySelectorAll(".actual-list-item");
+const actualSlideList = document.querySelector(".actual-list");
+const actualSlides = document.querySelectorAll(".actual-list-item");
+const actualPrevBtn = document.querySelector(".actual-slider-btn-ctrl:first-child");
+const actualNextBtn = document.querySelector(".actual-slider-btn-ctrl:last-child");
+let actualGap;
+let actualClicksCount;
 
-  const slidesCount = slides.length;
-
-  let visibleSlides = 3;
-  let currentSlideIndex = 0;
-
-  function showSlides() {
-    slides.forEach((slide, index) => {
-      if (
-        index >= currentSlideIndex &&
-        index < currentSlideIndex + visibleSlides
-      ) {
-        slide.style.display = "block";
-      } else {
-        slide.style.display = "none";
-      }
-    });
-  }
-
-  document
-    .querySelector(".actual-slider-btn-ctrl:first-child")
-    .addEventListener("click", () => {
-      if (currentSlideIndex > 0) {
-        currentSlideIndex--;
-      } else {
-        currentSlideIndex = slidesCount - visibleSlides;
-      }
-      showSlides();
-    });
-
-  document
-    .querySelector(".actual-slider-btn-ctrl:last-child")
-    .addEventListener("click", () => {
-      if (currentSlideIndex < slidesCount - visibleSlides) {
-        currentSlideIndex++;
-      } else {
-        currentSlideIndex = 0;
-      }
-      showSlides();
-    });
-
-  showSlides();
+if (window.innerWidth < 768) {
+  actualGap = 15;
+  actualClicksCount = 4;
+} else if (window.innerWidth >= 992 && window.innerWidth < 1200) {
+  actualGap = 20;
+  actualClicksCount = 2;
+} else if (window.innerWidth >= 1200) {
+  actualGap = 30;
+  actualClicksCount = 2;
+} else if (window.innerWidth >= 768 && window.innerWidth < 992) {
+  actualGap = 24;
+  actualClicksCount = 3;
 }
 
-if (window.innerWidth > 767) {
-  const slideList = document.querySelector(".actual-list");
-  const slides = document.querySelectorAll(".actual-list-item");
-  const prevBtn = document.querySelector(".actual-slider-btn-ctrl:first-child");
-  const nextBtn = document.querySelector(".actual-slider-btn-ctrl:last-child");
-  let gap;
-  let clicksCount;
+const actualSlideWidth = actualSlides[0].offsetWidth;
+let actualCurrentIndex = 0;
+actualPrevBtn.disabled = true;
 
-  if (window.innerWidth >= 992 && window.innerWidth < 1200) {
-    gap = 20;
-    clicksCount = 2;
-  } else if (window.innerWidth >= 1200) {
-    gap = 30;
-    clicksCount = 2;
-  } else if (window.innerWidth < 992) {
-    gap = 24;
-    clicksCount = 3;
+actualPrevBtn.addEventListener("click", () => {
+  actualPrevSlide();
+});
+
+actualNextBtn.addEventListener("click", () => {
+  actualNextSlide();
+});
+
+function actualNextSlide() {
+  if (actualCurrentIndex < actualClicksCount) {
+    actualCurrentIndex++;
+    actualPrevBtn.disabled = false;
+    actualSlideList.style.transition = "transform 0.4s ease-in-out";
+    actualSlideList.style.transform = `translateX(-${
+      actualCurrentIndex * actualSlideWidth + actualGap * actualCurrentIndex
+    }px)`;
   }
 
-  const slideWidth = slides[0].offsetWidth;
-  let currentIndex = 0;
-  prevBtn.disabled = true;
-
-  prevBtn.addEventListener("click", () => {
-    prevSlide();
-  });
-
-  nextBtn.addEventListener("click", () => {
-    nextSlide();
-  });
-
-  function nextSlide() {
-    if (currentIndex < clicksCount) {
-      currentIndex++;
-      prevBtn.disabled = false;
-      slideList.style.transition = "transform 0.4s ease-in-out";
-      slideList.style.transform = `translateX(-${
-        currentIndex * slideWidth + gap * currentIndex
-      }px)`;
-    }
-
-    if (currentIndex === clicksCount) {
-      nextBtn.disabled = true;
-    }
+  if (actualCurrentIndex === actualClicksCount) {
+    actualNextBtn.disabled = true;
   }
-
-  function prevSlide() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      nextBtn.disabled = false;
-      slideList.style.transition = "transform 0.4s ease-in-out";
-      slideList.style.transform = `translateX(-${
-        currentIndex * slideWidth + gap * currentIndex
-      }px)`;
-    }
-    if (currentIndex === 0) {
-      prevBtn.disabled = true;
-    }
-  }
-
-  slideList.addEventListener("transitionend", () => {
-    slides.forEach((slide) => {
-      slide.style.transition = "";
-    });
-  });
-
-  slideList.addEventListener("touchstart", (e) => {
-    touchStartX = e.touches[0].clientX;
-  });
-
-  slideList.addEventListener("touchend", (e) => {
-    touchEndX = e.changedTouches[0].clientX;
-    if (touchEndX < touchStartX) {
-      nextSlide();
-    } else if (touchEndX > touchStartX) {
-      prevSlide();
-    }
-  });
 }
+
+function actualPrevSlide() {
+  if (actualCurrentIndex > 0) {
+    actualCurrentIndex--;
+    actualNextBtn.disabled = false;
+    actualSlideList.style.transition = "transform 0.4s ease-in-out";
+    actualSlideList.style.transform = `translateX(-${
+      actualCurrentIndex * actualSlideWidth + actualGap * actualCurrentIndex
+    }px)`;
+  }
+  if (actualCurrentIndex === 0) {
+    actualPrevBtn.disabled = true;
+  }
+}
+
+actualSlideList.addEventListener("transitionend", () => {
+  actualSlides.forEach((slide) => {
+    slide.style.transition = "";
+  });
+});
+
+actualSlideList.addEventListener("touchstart", (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+
+actualSlideList.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+  if (touchEndX < touchStartX) {
+    actualNextSlide();
+  } else if (touchEndX > touchStartX) {
+    actualPrevSlide();
+  }
+});
