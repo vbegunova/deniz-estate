@@ -1,3 +1,4 @@
+const massMediaSection = document.querySelector('.mass-media');
 const slideList = document.querySelector(".mass-media-list");
 const slidesMassMedia = document.querySelectorAll(".mass-media-item");
 const prevBtn = document.querySelector(
@@ -56,11 +57,11 @@ slideList.addEventListener("transitionend", () => {
   });
 });
 
-slideList.addEventListener("touchstart", (e) => {
+massMediaSection.addEventListener("touchstart", (e) => {
   touchStartX = e.touches[0].clientX;
 });
 
-slideList.addEventListener("touchend", (e) => {
+massMediaSection.addEventListener("touchend", (e) => {
   touchEndX = e.changedTouches[0].clientX;
   if (touchEndX < touchStartX) {
     masNextSlide();
