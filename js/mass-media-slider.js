@@ -1,4 +1,4 @@
-const massMediaSection = document.querySelector('.mass-media');
+const massMediaSection = document.querySelector(".mass-media");
 const slideList = document.querySelector(".mass-media-list");
 const slidesMassMedia = document.querySelectorAll(".mass-media-item");
 const prevBtn = document.querySelector(
@@ -22,14 +22,34 @@ nextBtn.addEventListener("click", () => {
   masNextSlide();
 });
 
+const firstVideoFrameset = document.querySelector(".video-first .video-frame");
+firstVideoFrameset.dataset.src = firstVideoFrameset.src;
+const secondVideoFrameset = document.querySelector(
+  ".video-second .video-frame"
+);
+secondVideoFrameset.dataset.src = secondVideoFrameset.src;
+const thirdVideoFrameset = document.querySelector(".video-third .video-frame");
+thirdVideoFrameset.dataset.src = thirdVideoFrameset.src;
+const scrSet = [
+  firstVideoFrameset.dataset.src,
+  secondVideoFrameset.dataset.src,
+  thirdVideoFrameset.dataset.src,
+];
+
 function massPrevSlide() {
   if (videoCurrentIndex > 0) {
+    const currentVideoFrame =
+      slidesMassMedia[videoCurrentIndex].querySelector(".video-frame");
+    currentVideoFrame.src = "";
     videoCurrentIndex--;
     nextBtn.disabled = false;
     slideList.style.transition = "transform 0.4s ease-in-out";
     slideList.style.transform = `translateX(-${
       videoCurrentIndex * slideWidth + gap * videoCurrentIndex
     }px)`;
+
+    slidesMassMedia[videoCurrentIndex].querySelector(".video-frame").src =
+      scrSet[videoCurrentIndex];
   }
   if (videoCurrentIndex === 0) {
     prevBtn.disabled = true;
@@ -38,12 +58,17 @@ function massPrevSlide() {
 
 function masNextSlide() {
   if (videoCurrentIndex < clicksCount) {
+    const currentVideoFrame =
+      slidesMassMedia[videoCurrentIndex].querySelector(".video-frame");
+    currentVideoFrame.src = "";
     videoCurrentIndex++;
     prevBtn.disabled = false;
     slideList.style.transition = "transform 0.4s ease-in-out";
     slideList.style.transform = `translateX(-${
       videoCurrentIndex * slideWidth + gap * videoCurrentIndex
     }px)`;
+    slidesMassMedia[videoCurrentIndex].querySelector(".video-frame").src =
+      scrSet[videoCurrentIndex];
   }
 
   if (videoCurrentIndex === clicksCount) {

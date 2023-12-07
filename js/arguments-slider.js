@@ -1,3 +1,4 @@
+const argumentsSection = document.querySelector('.arguments');
 const argumentsSlideList = document.querySelector(".arguments-slider");
 const argumentsSlides = document.querySelectorAll(".arguments-slider-box");
 const argPrevBtn = document.querySelector(
@@ -72,5 +73,31 @@ argumentsSlideList.addEventListener("touchend", (e) => {
     argNextSlide();
   } else if (touchEndX > touchStartX) {
     argPrevSlide();
+  }
+});
+
+let argumentsIsDragging = false;
+let argumentsStartX;
+let argumentsEndX;
+
+argumentsSection.addEventListener("mousedown", (e) => {
+  argumentsIsDragging = true;
+  argumentsStartX = e.clientX;
+});
+
+argumentsSection.addEventListener("mousemove", (e) => {
+  if (argumentsIsDragging) {
+    argumentsEndX = e.clientX;
+  }
+});
+
+argumentsSection.addEventListener("mouseup", () => {
+  if (argumentsIsDragging) {
+    if (argumentsEndX < argumentsStartX) {
+      argNextSlide();
+    } else if (argumentsEndX > argumentsStartX) {
+      argPrevSlide();
+    }
+    argumentsIsDragging = false;
   }
 });

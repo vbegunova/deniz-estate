@@ -1,3 +1,4 @@
+const actualSection = document.querySelector('.actual');
 const actualSlideList = document.querySelector(".actual-list");
 const actualSlides = document.querySelectorAll(".actual-list-item");
 const actualPrevBtn = document.querySelector(".actual-slider-btn-ctrl:first-child");
@@ -76,5 +77,31 @@ actualSlideList.addEventListener("touchend", (e) => {
     actualNextSlide();
   } else if (touchEndX > touchStartX) {
     actualPrevSlide();
+  }
+});
+
+let actualIsDragging = false;
+let actualStartX;
+let actualEndX;
+
+actualSection.addEventListener("mousedown", (e) => {
+  actualIsDragging = true;
+  actualStartX = e.clientX;
+});
+
+actualSection.addEventListener("mousemove", (e) => {
+  if (actualIsDragging) {
+    actualEndX = e.clientX;
+  }
+});
+
+actualSection.addEventListener("mouseup", () => {
+  if (actualIsDragging) {
+    if (actualEndX < actualStartX) {
+      actualNextSlide();
+    } else if (actualEndX > actualStartX) {
+      actualPrevSlide();
+    }
+    actualIsDragging = false;
   }
 });

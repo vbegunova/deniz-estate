@@ -95,26 +95,39 @@ function toggleModal(modal) {
     : "hidden";
 }
 
+const firstVideoFrame = document.querySelector('.video-first .video-frame');
+firstVideoFrame.dataset.src = firstVideoFrame.src;
+const secondVideoFrame = document.querySelector('.video-second .video-frame');
+secondVideoFrame.dataset.src = secondVideoFrame.src;
+const thirdVideoFrame = document.querySelector('.video-third .video-frame');
+thirdVideoFrame.dataset.src = thirdVideoFrame.src;
+
 function openFirstVideo() {
   toggleModal(firstVideoModal);
+  firstVideoFrame.src = `${firstVideoFrame.dataset.src}?autoplay=1`;
 }
 
 function closeFirstVideo() {
   toggleModal(firstVideoModal);
+  firstVideoFrame.src = 'about:blank';
 }
 
 function openSecondVideo() {
   toggleModal(secondVideoModal);
+  secondVideoFrame.src = `${secondVideoFrame.dataset.src}?autoplay=1`;
 }
 
 function closeSecondVideo() {
   toggleModal(secondVideoModal);
+  secondVideoFrame.src = 'about:blank';
 }
 
 function openThirdVideo() {
   toggleModal(thirdVideoModal);
+  thirdVideoFrame.src = `${thirdVideoFrame.dataset.src}?autoplay=1`;
 }
 
 function closeThirdVideo() {
   toggleModal(thirdVideoModal);
+  thirdVideoFrame.src = 'about:blank';
 }

@@ -76,7 +76,9 @@ function updateSlide(index) {
 
 function slideButtonClick(direction) {
   if (direction === "next") {
-    currentIndex++;
+    if (currentIndex < totalSlides - 1) {
+      currentIndex++;
+    }
     objectSliderNext.disabled = false;
     mobileObjectSliderNext.disabled = false;
     if (currentIndex === totalSlides - 1) {
@@ -84,7 +86,9 @@ function slideButtonClick(direction) {
       mobileObjectSliderNext.disabled = true;
     }
   } else {
-    currentIndex--;
+    if (currentIndex > 0) {
+      currentIndex--;
+    }
     mobileObjectSliderPrev.disabled = false;
     objectSliderPrev.disabled = false;
     if (currentIndex === 0) {
@@ -131,3 +135,30 @@ objectSection.addEventListener("touchend", (e) => {
 });
 
 updateSlide(currentIndex);
+
+
+let objectsIsDragging = false;
+let objectsStartX;
+let objectsEndX;
+
+objectSection.addEventListener("mousedown", (e) => {
+  objectsIsDragging = true;
+  objectsStartX = e.clientX;
+});
+
+objectSection.addEventListener("mousemove", (e) => {
+  if (objectsIsDragging) {
+    objectsEndX = e.clientX;
+  }
+});
+
+objectSection.addEventListener("mouseup", () => {
+  if (objectsIsDragging) {
+    if (objectsEndX < objectsStartX) {
+      slideButtonClick("next");
+    } else if (objectsEndX > objectsStartX) {
+      slideButtonClick("prev");
+    }
+    objectsIsDragging = false;
+  }
+});
